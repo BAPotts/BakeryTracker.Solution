@@ -1,24 +1,20 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vendor.Models;
+using BakeryTracker.Models;
 using System.Collections.Generic;
 using System;
 
-namespace BakeryTracker.TestTools
+namespace BakeryTracker.Tests
 {
   [TestClass]
 
-  public class VendorTest : IDisposable
+  public class VendorTest 
   {
 
-    public void Dispose()
-    {
-      Vendor.ClearAll();
-    }
-
+  [TestMethod]
     public void VendorConstructor_CreatesVendorObject_Vendor()
     {
       Vendor newVendor = new Vendor();
-      Assert.AreEqual(typeof(Item), newItem.GetType());
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }
