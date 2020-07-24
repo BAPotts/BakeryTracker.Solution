@@ -13,7 +13,7 @@ namespace BakeryTracker.Tests
     {
       Vendor.ClearAll();
     }
-    
+
   [TestMethod]
     public void VendorConstructor_CreatesVendorObject_Vendor()
     {
@@ -64,6 +64,19 @@ namespace BakeryTracker.Tests
       List<Vendor> result = Vendor.GetAll();
       //Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetId_ReturnsCategoryId_Int()
+    {
+      //Arrange
+      string name = "Test";
+      string descrip = "descrip";
+      Vendor newVendor = new Vendor(descrip, name);
+
+      //Act
+      int result = newVendor.Id;
+
+      Assert.AreEqual(1, result);
     }
   }
 }
