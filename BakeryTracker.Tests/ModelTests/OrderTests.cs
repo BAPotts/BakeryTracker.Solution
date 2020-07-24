@@ -6,12 +6,16 @@ using System;
 namespace BakeryTracker.Tests
 {
   [TestClass]
-
-  public class OrderTest : IDisposable
+  public class OrderTest
   {
-    public void Dispose()
+    [TestMethod]
+    public void OrderConstructor_CreatesOrderObject_Order()
     {
-      Vendor.ClearAll();
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
+
+
+  
 }
