@@ -8,7 +8,7 @@ namespace BakeryTracker.Models
     public string Description {get;}
 
     public Vendor(string description)
-    {description = "banana";
+    {
       Description = description ;
     }
   }
