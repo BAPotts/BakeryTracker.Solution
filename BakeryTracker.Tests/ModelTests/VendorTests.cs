@@ -12,7 +12,7 @@ namespace BakeryTracker.TestTools
 
     public void Dispose()
     {
-      Category.ClearAll();
+      Vendor.ClearAll();
     }
   }
 }
