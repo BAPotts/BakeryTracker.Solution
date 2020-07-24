@@ -37,6 +37,7 @@ namespace BakeryTracker.Tests
 
       //Act
       string updatedDescription = "Tapas restaurant in Detroit";
+      newVendor.Description = updatedDescription;
       string result = newVendor.Description;
 
       //Assert
