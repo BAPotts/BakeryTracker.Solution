@@ -7,9 +7,13 @@ namespace BakeryTracker.Tests
 {
   [TestClass]
 
-  public class VendorTests
+  public class VendorTest : IDisposable
   {
-
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
   [TestMethod]
     public void VendorConstructor_CreatesVendorObject_Vendor()
     {
