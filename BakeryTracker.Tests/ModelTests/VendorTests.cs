@@ -5,5 +5,14 @@ using System;
 
 namespace BakeryTracker.TestTools
 {
-  
+  [TestClass]
+
+  public class VendorTest : IDisposable
+  {
+
+    public void Dispose()
+    {
+      Category.ClearAll();
+    }
+  }
 }
