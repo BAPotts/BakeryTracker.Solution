@@ -14,5 +14,11 @@ namespace BakeryTracker.TestTools
     {
       Vendor.ClearAll();
     }
+
+    public void VendorConstructor_CreatesVendorObject_Vendor()
+    {
+      Vendor newVendor = new Vendor();
+      Assert.AreEqual(typeof(Item), newItem.GetType());
+    }
   }
 }
