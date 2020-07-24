@@ -75,8 +75,23 @@ namespace BakeryTracker.Tests
 
       //Act
       int result = newVendor.Id;
-
+      //Assert
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void  Find_ReturnsCorrectVendor_Vendor()
+    {
+       //Arrange
+      string name1 = "HoneyBee";
+      string descrip1 = "HoneyBee Market in Detroit";
+      string name2 = "PapasCafe";
+      string descrip2 = "Papa's Cafe in Berkley";
+      Vendor newVendor = new Vendor(descrip1, name1);
+      Vendor newVendor2 = new Vendor(descrip2, name2);
+      //Act
+      Vendor result = Vendor.Find(2);
+      //Assert
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }
