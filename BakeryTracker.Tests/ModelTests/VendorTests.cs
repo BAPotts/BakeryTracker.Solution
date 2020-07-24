@@ -27,5 +27,20 @@ namespace BakeryTracker.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+
+      //Arrange
+      string description = "Pizza place in Royal Oak";
+      Vendor newVendor = new Vendor(description);
+
+      //Act
+      string updatedDescription = "Tapas restaurant in Detroit";
+      string result = newVendor.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
