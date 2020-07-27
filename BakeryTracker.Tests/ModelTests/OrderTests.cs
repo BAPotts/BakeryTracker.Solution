@@ -28,6 +28,22 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(description, descripResult);
       Assert.AreEqual(price, priceResult);
     }
+    [TestMethod]
+    public void setProperties_setProperties_StringStringInt()
+    {
+      Order newOrder = new Order("12/05/2020","2 loaves", 1);
+
+      //Act
+      string updatedDate = "1/1/2021";
+      newOrder.Date = updatedDate; 
+      newOrder.Description = "1 loaf";
+      newOrder.Price = 2;
+
+      //Assert
+      Assert.AreEqual("1/1/2021", newOrder.Date);
+      Assert.AreEqual("1 loaf", newOrder.Description);
+      Assert.AreEqual(2, newOrder.Price);
+    }
 
   }
 
