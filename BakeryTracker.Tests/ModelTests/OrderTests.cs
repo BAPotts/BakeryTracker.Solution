@@ -13,7 +13,7 @@ namespace BakeryTracker.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void OrderConstructor_CreatesOrderObject_Order()
     {
@@ -51,18 +51,32 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(2, newOrder.Price);
     }
     [TestMethod]
-public void GetAll_ReturnsEmptyList_OrderList()
-{
-  // Arrange
-  List<Order> newList = new List<Order> {};
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newList = new List<Order> {};
 
-  // Act
-  List<Order> result = Order.GetAll();
+      // Act
+      List<Order> result = Order.GetAll();
 
-  // Assert
-  CollectionAssert.AreEqual(newList, result);
-}
+      // Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      //Arrange
+      
+      Order newOrder1 = new Order("12/5/2020", "2 loaves", 1);
+      Order newOrder2 = new Order("11/5/2020", "1 loaf", 2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
+      //Act
+      List<Order> result = Order.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 
