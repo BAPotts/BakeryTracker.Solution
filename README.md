@@ -18,7 +18,7 @@ _A website to track the vendors served by Pierre's bakery. It allows the user to
 |The vendors page will link to a page with a Vendor creation form
 |This website will create Vendor objects with name, description, and a list of orders belonging to the vendor|||
 |The vendor creation page will add Vendors to a static list and reroute to homepage after new vendor is created|||
-|This website will create Order objects with title, description, price, and date|||
+|This website will create Order objects with description, price, and date|||
 |Vendor names will be links to a new page that displays that vendors orders|||
 |Vendor order page will like to an Order creation page for that vendor|||
 
