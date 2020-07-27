@@ -15,14 +15,18 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
-    public void GetDate_ReturnsDate_String()
+    public void getProperties_ReturnsProperties_StringStringInt()
     {
       string date = "7/24/2020";
       string description = "3 loaves of sourdough";
       int price = 9;
       Order newOrder = new Order(date, description, price);
-      string result = newOrder.Date;
-      Assert.AreEqual(date, result);
+      string dateResult = newOrder.Date;
+      string descripResult = newOrder.Description;
+      int priceResult = newOrder.Price;
+      Assert.AreEqual(date, dateResult);
+      Assert.AreEqual(description, descripResult);
+      Assert.AreEqual(price, priceResult);
     }
 
   }

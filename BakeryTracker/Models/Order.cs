@@ -10,7 +10,7 @@ namespace BakeryTracker.Models
     public int Price { get; }
     public Order(string date, string description, int price)
     {
-    Date = date + "2";
+    Date = date;
     Description = description + "a";
     Price = price +1;
     }
