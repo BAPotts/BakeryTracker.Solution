@@ -12,7 +12,7 @@ namespace BakeryTracker.Models
     {
     Date = date;
     Description = description;
-    Price = price +1;
+    Price = price;
     }
   }
 }
