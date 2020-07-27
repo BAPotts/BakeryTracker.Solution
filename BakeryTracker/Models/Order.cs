@@ -11,7 +11,7 @@ namespace BakeryTracker.Models
     public Order(string date, string description, int price)
     {
     Date = date;
-    Description = description + "a";
+    Description = description;
     Price = price +1;
     }
   }
