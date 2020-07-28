@@ -14,7 +14,7 @@ namespace BakeryTracker.Tests
       Vendor.ClearAll();
     }
 
-  [TestMethod]
+    [TestMethod]
     public void VendorConstructor_CreatesVendorObject_Vendor()
     {
       Vendor newVendor = new Vendor("test string", "test string");
@@ -92,6 +92,23 @@ namespace BakeryTracker.Tests
       Vendor result = Vendor.Find(2);
       //Assert
       Assert.AreEqual(newVendor2, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderwithVendor_OrderList()
+    {
+      string date = "12/12/2020";
+      string descrip1 = "3 loaves";
+      int price1 = 9;
+      Order newOrder = new Order(date, descrip1, price1);
+      List<Order>  newList = new List<Order>{ newOrder };
+      string name ="Honeybee";
+      string descrip = "Honeybee market in detroit";
+      Vendor newVendor =new Vendor(descrip, name);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
