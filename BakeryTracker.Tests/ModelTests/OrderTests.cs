@@ -88,6 +88,16 @@ namespace BakeryTracker.Tests
 
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder1 = new Order("12/5/2020", "2 loaves", 1);
+      Order newOrder2 = new Order("11/5/2020", "1 loaf", 2);
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder2, result);
+    }
 
   }
 
