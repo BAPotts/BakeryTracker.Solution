@@ -8,13 +8,15 @@ namespace BakeryTracker.Models
     public string Date { get; set;}
     public string Description { get; set; }
     public int Price { get; set; }
+    public int Id {get; }
     private static List<Order> _instances = new List<Order> {};
     public Order(string date, string description, int price)
     {
-    Date = date;
-    Description = description;
-    Price = price;
-    _instances.Add(this);
+      Date = date;
+      Description = description;
+      Price = price;
+      _instances.Add(this);
+      Id = _instances.Count+1;
     }
     public static List<Order> GetAll()
     {

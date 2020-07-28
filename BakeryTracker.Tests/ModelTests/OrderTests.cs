@@ -77,6 +77,17 @@ namespace BakeryTracker.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_ItemsInstantiateWithanIdandGetterReturns_Int()
+    {
+      string date = "7/24/2020";
+      string description = "3 loaves of sourdough";
+      int price = 9;
+      Order newOrder = new Order(date, description, price);
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
 
   }
 
