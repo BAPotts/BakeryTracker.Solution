@@ -16,6 +16,7 @@ namespace BakeryTracker.Models
       Name = vendorName;
       _instances.Add(this);
       Id = _instances.Count;
+      Orders = new List<Order> { };
     }
 
     public static List<Vendor> GetAll()
