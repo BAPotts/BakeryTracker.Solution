@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using BakeryTracker.Models;
+
+<h3>Orders</h3>
+<ol>
+@foreach(Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order..Id'>@order.Description</a></li>
+}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/vendors'>Return to vendor list</a></p>
+<p><a href='/'>Return to Home</a></p>
