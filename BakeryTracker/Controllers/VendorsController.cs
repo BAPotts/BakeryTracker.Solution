@@ -20,9 +20,9 @@ namespace BakeryTracker.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendDescrip, string vendorName)
+    public ActionResult Create(string vendorDescription, string vendorName)
     {
-      Vendor newVendor = new Vendor(vendDescrip, vendorName);
+      Vendor newVendor = new Vendor(vendorDescription, vendorName);
       return RedirectToAction("Index");
     }
     [HttpGet("/vendors/{id}")]
